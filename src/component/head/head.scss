@@ -1,0 +1,22 @@
+.head {
+    position: absolute;
+    height: 62px;
+    line-height: 62px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f7f7f7;
+    padding: 0 1rem;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1;
+
+    .head-setting {
+        float: right;
+        margin-right: 2rem;
+
+        .menu {
+            left: auto !important;
+            right: 0 !important;
+        }
+    }
+}
