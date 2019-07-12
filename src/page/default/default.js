@@ -42,18 +42,31 @@ export default class Default extends Component {
                         首页
                     </Menu.Item>
                     <Menu.Item>
-                        配置
+                        基础爬虫
                         <Menu.Menu>
                             <Menu.Item
-                                name='search'
-                                active={activeItem === 'search'}
+                                name='list'
+                                active={activeItem === 'list'}
                                 onClick={this.handleItemClick}
                                 link href="#/setting/static"
                                 >
-                                静态页面
+                                任务列表
                             </Menu.Item>
-                            <Menu.Item name='add' active={activeItem === 'add'} onClick={this.handleItemClick}>
-                                Add
+                            <Menu.Item
+                                name='add'
+                                active={activeItem === 'add'}
+                                onClick={this.handleItemClick}
+                                link href="#/setting/static"
+                                >
+                                新建任务
+                            </Menu.Item>
+                            <Menu.Item
+                                name='result'
+                                active={activeItem === 'result'}
+                                onClick={this.handleItemClick}
+                                link href="#/setting/static"
+                                >
+                                结果展示
                             </Menu.Item>
                         </Menu.Menu>
                     </Menu.Item>
