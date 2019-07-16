@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Icon, Dropdown, Button } from 'semantic-ui-react';
+import { Icon, Dropdown, Button, Breadcrumb } from 'semantic-ui-react';
 
 import './head.scss';
 
@@ -19,6 +19,15 @@ export default class Head extends Component {
                 {/* <Button.Group basic size='small' color="teal" onClick={ this.slideMenu }>
                     <Button icon='th list' />
                 </Button.Group> */}
+                <div style={{float: 'left'}}>
+                    <Breadcrumb>
+                        <Breadcrumb.Section link>Home</Breadcrumb.Section>
+                        <Breadcrumb.Divider />
+                        <Breadcrumb.Section link>Store</Breadcrumb.Section>
+                        <Breadcrumb.Divider />
+                        <Breadcrumb.Section active>T-Shirt</Breadcrumb.Section>
+                    </Breadcrumb>
+                </div>
                 <div className="head-setting">
                     <Dropdown text='设置' direction='right' floating icon='settings' className='icon'>
                         <Dropdown.Menu>

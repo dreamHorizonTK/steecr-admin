@@ -4,6 +4,9 @@ import { Divider, Header, Grid, TextArea, Radio,
     Tab, Form, Button, Table, Checkbox, Message, Popup, Input } from 'semantic-ui-react';
 
 import StaticConfig from '../../component/staticConfig/staticConfig';
+import StaticAdvance from '../../component/staticAdvance/staticAdvance';
+
+import './static.scss';
 
 const history = createHashHistory();
 
@@ -14,7 +17,9 @@ const panes = [{
     </Tab.Pane>)
 }, {
     menuItem: '高级设置',
-    render: () => <Tab.Pane attached={false}>Tab 2 Content</Tab.Pane>
+    render: () => <Tab.Pane attached={false}>
+        <StaticAdvance />
+    </Tab.Pane>
 }]
 
 export default class Static extends Component {
@@ -35,6 +40,11 @@ export default class Static extends Component {
                 <Header as='h3'>基础爬虫</Header>
                 <Divider hidden />
                 <Tab menu={{ secondary: true, pointing: true }} panes={panes} />
+                <div className="foot-button">
+                    <Button>测试</Button>
+                    <Button color="teal">执行一次</Button>
+                    <Button color="teal">保存</Button>
+                </div>
             </div>
         );
     }

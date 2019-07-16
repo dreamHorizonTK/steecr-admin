@@ -12,7 +12,7 @@ export default class Foot extends Component {
     render() {
         return (
             <div className="foot">
-                { this.state.year } @ <a href="http://www.zhuyuntao.cn" target="_target">2fps</a> 项目名称
+                { this.state.year } <a href="https://github.com/dreamHorizonTK/steecr-admin" target="_target">steecr-admin</a> @ <a href="http://www.zhuyuntao.cn" target="_target">2fps</a>
             </div>
         )
     }

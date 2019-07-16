@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
-import { Grid, TextArea, Radio, Form, Button, Table, Checkbox, Message, Popup, Input } from 'semantic-ui-react';
+import { Grid, TextArea, Radio, Form, Button, Table, Checkbox, Message, Popup, Input, Select } from 'semantic-ui-react';
+
+import './staticConfig.scss';
+
+const encodeType = [{
+    key: 'utf-8',
+    value: 'utf-8',
+    text: 'UTF-8',
+}, {
+    key: 'gbk',
+    value: 'gbk',
+    text: 'GB2312',
+}];
 
 export default class StaticConfig extends Component {
 
@@ -11,7 +23,7 @@ export default class StaticConfig extends Component {
         return (
             <Grid>
                 <Grid.Row>
-                    <Grid.Column width={2} textAlign="right" verticalAlign="">
+                    <Grid.Column width={2} textAlign="right" className="form-row">
                         任务名称
                     </Grid.Column>
                     <Grid.Column width={14}>
@@ -19,7 +31,9 @@ export default class StaticConfig extends Component {
                             <input placeholder='请输入任务名称' />
                         </Form>
                     </Grid.Column>
-                    <Grid.Column width={2} textAlign="right" verticalAlign="">
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column width={2} textAlign="right" className="form-row">
                         url地址
                     </Grid.Column>
                     <Grid.Column width={14}>
@@ -32,21 +46,9 @@ export default class StaticConfig extends Component {
                                 <Input />
                         </Form>
                     </Grid.Column>
-                    <Grid.Column width={2} textAlign="right" verticalAlign="">
-                        抓取间隔
-                    </Grid.Column>
-                    <Grid.Column width={14}>
-                        <Form>
-                            <input placeholder='抓取间隔' />
-                        </Form>
-                    </Grid.Column>
-                    <Grid.Column width={2} textAlign="right" verticalAlign="">
-                        定时
-                    </Grid.Column>
-                    <Grid.Column width={14}>
-                        <Radio toggle onClick={ this.changeInter } readOnly />
-                    </Grid.Column>
-                    <Grid.Column width={2} textAlign="right" verticalAlign="">
+                </Grid.Row> 
+                <Grid.Row>
+                    <Grid.Column width={2} textAlign="right" className="form-row">
                         字段定义
                     </Grid.Column>
                     <Grid.Column width={14}>
@@ -82,10 +84,7 @@ export default class StaticConfig extends Component {
                             </Table.Body>
                         </Table>
                     </Grid.Column>
-                    <Grid.Column width={2} textAlign="right" verticalAlign=""></Grid.Column>
-                    <Grid.Column width={14} textAlign="left" verticalAlign="">
-                        <Button color="teal">抓取</Button>
-                    </Grid.Column>
+                    <Grid.Column width={2} textAlign="right" ></Grid.Column>
                 </Grid.Row>
             </Grid>
         );

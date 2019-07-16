@@ -48,7 +48,6 @@ export default class Default extends Component {
                                 name='list'
                                 active={activeItem === 'list'}
                                 onClick={this.handleItemClick}
-                                link href="#/setting/static"
                                 >
                                 任务列表
                             </Menu.Item>
